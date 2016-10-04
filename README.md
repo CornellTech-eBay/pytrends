@@ -1,5 +1,11 @@
 #pytrends
+
+## My Introduction
+
+This project can get data from google trends.
+
 ##Introduction
+
 Unofficial API for Google Trends
 
 Allows simple interface for automating downloading of reports from Google Trends. Main feature is to allow the script to login to Google on your behalf to enable a higher rate limit. Only good until Google changes their backend again :-P. When that happens feel free to contribute!
@@ -19,7 +25,7 @@ Allows simple interface for automating downloading of reports from Google Trends
     * [suggestions](#suggestions)
   * [Cavets](#cavets)
 * [Credits](#credits)
-	
+
 <hr>
 
 ## Installation
@@ -83,9 +89,9 @@ Many API methods use `payload` here is a set of known keys that can be used.
   - Example ```{'q': 'Pizza'}```
   - Up to five terms in a comma seperated string: ```{'q': 'Pizza, Italian, Spaghetti, Breadsticks, Sausage'}```
     * Advanced Keywords
-      - When using Google Trends dashboard Google may provide suggested narrowed search terms. 
-      - For example ```"iron"``` will have a drop down of ```"Iron Chemical Element, Iron Cross, Iron Man, etc"```. 
-      - Find the encoded topic by using the get_suggestions() function and choose the most relevant one for you. 
+      - When using Google Trends dashboard Google may provide suggested narrowed search terms.
+      - For example ```"iron"``` will have a drop down of ```"Iron Chemical Element, Iron Cross, Iron Man, etc"```.
+      - Find the encoded topic by using the get_suggestions() function and choose the most relevant one for you.
       - For example: ```https://www.google.com/trends/explore#q=%2Fm%2F025rw19&cmpt=q```
       - ```"%2Fm%2F025rw19"``` is the topic "Iron Chemical Element" to use this with pytrends
 * `hl`
@@ -156,7 +162,7 @@ Parameters
 * `return_type`
   - 'dataframe' returns a Pandas Dataframe
   - 'json' returns json
-  
+
 Returns JSON or Dataframe
 
 [back to top](#trend)
@@ -175,7 +181,7 @@ Parameters
   - *Required*
   - 'top' returns top related data
   - 'rising' returns rising related data
-  
+
 Returns JSON
 
 [back to top](#related)
@@ -214,7 +220,7 @@ Parameters
 * `payload`
   - *Required*
   - a dictionary of key, values
-  
+
 Returns XML RSS Feed
 
 [back to top](#hottrendsdetail)
@@ -244,7 +250,7 @@ Parameters
 * `keyword`
   - *Required*
   - keyword to get suggestions for
-  
+
 Returns JSON
 
 [back to top](#suggestions)
