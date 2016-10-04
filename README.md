@@ -4,6 +4,8 @@
 
 This project can get data from google trends.
 
+To run the testing script, make sure python 3.3+ is installed and do "python testpytrends.py".
+
 ##Introduction
 
 Unofficial API for Google Trends
