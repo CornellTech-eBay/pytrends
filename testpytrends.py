@@ -1,15 +1,15 @@
 # @Author: Gao Bo
 # @Date:   2016-10-03T22:39:11-04:00
 # @Last modified by:   Gao Bo
-# @Last modified time: 2016-10-03T23:48:14-04:00
+# @Last modified time: 2016-10-04T13:47:00-04:00
 
 
 
 from pytrends.request import *
 import json
 
-def parseTrendsJson(trends):
-    tdate = 1
+def parsetop30in30(trends):
+    tdate = 0
     # test: just get the most trending term of the first day of this week
     # date is a string
     date = trends["weeksList"][-1]["daysList"][tdate]["longFormattedDate"]
@@ -25,14 +25,21 @@ def parseTrendsJson(trends):
     # for term in relatedSearchesList:
     #     print()
 
+def parseHottrends(trends):
+    print(type(trends))
+
 
 if __name__ == "__main__":
     google_username = "cornelltechebay@gmail.com"
     google_password = "cornell&ebay"
     pytrends = TrendReq(google_username, google_password, custom_useragent=None)
 
-    top30 = pytrends.top30in30()
-    parseTrendsJson(top30)
+    # top30 = pytrends.top30in30()
+    # parsetop30in30(top30)
+
+    hottrendsdetail = pytrends.hottrendsdetail({})
+    parseHottrends(hottrendsdetail)
+
     outfile = open('trendsOutput.txt', 'w')
-    outfile.write(json.dumps(top30, sort_keys=True, indent=4, separators=(',', ': ')))
+    outfile.write(json.dumps(hottrendsdetail, sort_keys=True, indent=4, separators=(',', ': ')))
     outfile.close()
