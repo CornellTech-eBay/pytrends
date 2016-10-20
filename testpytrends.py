@@ -1,7 +1,7 @@
 # @Author: Gao Bo
 # @Date:   2016-10-03T22:39:11-04:00
 # @Last modified by:   Gao Bo
-# @Last modified time: 2016-10-11T20:20:03-04:00
+# @Last modified time: 2016-10-11T20:21:34-04:00
 
 
 
@@ -51,6 +51,6 @@ if __name__ == "__main__":
 
     print(keywordsList)
 
-    outfile = open('trendsOutput2.txt', 'w')
+    outfile = open('trendsOutput.txt', 'w')
     outfile.write(json.dumps(hottrendsdetail, sort_keys=True, indent=4, separators=(',', ': ')))
     outfile.close()
